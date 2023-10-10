@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
       <div className="wrapper">
         <img src={heroImage} alt="" />
         <Header></Header>

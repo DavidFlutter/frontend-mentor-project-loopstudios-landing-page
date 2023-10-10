@@ -34,6 +34,13 @@
   font-size: 1.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.wrapper .Header .menu-btn {
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  display: none;
+}
 .wrapper .Header nav {
   display: flex;
   gap: 2rem;
@@ -42,6 +49,14 @@
   font-size: 1.3rem;
 }
 
+@media (max-width: 450px) {
+  .wrapper .Header .menu-btn {
+    display: block;
+  }
+  .wrapper .Header nav {
+    display: none;
+  }
+}
 .Hero .hero-text {
   width: 20rem;
   display: flex;
@@ -98,6 +113,23 @@
   color: gray;
 }
 
+@media (max-width: 450px) {
+  .SectionOne {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+  .SectionOne img {
+    padding-bottom: 2rem;
+  }
+  .SectionOne .text {
+    padding: 0;
+    transform: translate(0, 0);
+    position: static;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+  }
+}
 .Gallery {
   padding: 2rem;
 }
@@ -108,6 +140,8 @@
 }
 .Gallery img {
   position: static;
+  height: 100%;
+  width: 100%;
 }
 .Gallery .images {
   width: 100%;
@@ -116,7 +150,28 @@
   align-items: center;
   gap: 1rem;
 }
+.Gallery .images .image-div {
+  position: relative;
+}
+.Gallery .images .image-div h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.24);
+  padding: 0.2rem;
+  width: 10rem;
+}
 
+@media (max-width: 450px) {
+  .Gallery h3 {
+    text-align: center;
+  }
+  .Gallery .image-div h3 {
+    text-align: start;
+  }
+}
 .Footer {
   position: absolute;
   left: 0;
@@ -138,11 +193,13 @@
   padding: 0;
   margin: 0;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 .Footer .wrapper nav {
   color: grey;
   display: flex;
   gap: 1rem;
+  font-size: 1.2rem;
 }
 .Footer .wrapper .right {
   display: flex;
@@ -155,4 +212,19 @@
 .Footer .wrapper .right button svg {
   color: white;
   font-size: 2rem;
+}
+
+@media (max-width: 450px) {
+  .App {
+    padding-bottom: 20rem;
+  }
+  .Footer .wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .Footer .wrapper nav {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=App.css.map */
